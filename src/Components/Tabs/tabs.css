@@ -1,0 +1,43 @@
+.react-tabs__tab--selected:focus {
+    border-bottom: none !important;
+    outline: none !important;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: inherit !important;
+}
+.react-tabs__tab--selected:active {
+    border-bottom: none !important;
+    outline: none !important;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: inherit !important;
+}
+.react-tabs__tab--selected::after {
+    display: none !important;
+    border-radius: 0 !important;
+}
+
+.SubGraphTabs_Reverse::before {
+    -webkit-transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+.react-tabs__tab--selected {
+    border-radius: 0;
+}
+
+.react-tabs__tab-list {
+    border-bottom: none;
+}
+
+
+

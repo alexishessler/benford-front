@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.App_dark {
+  background-color: rgb(19, 18, 19);
+  /* color: #546de5; */
+}
+
+.App_light {
+  background-color: #ebe5e5;
+  /* color: rgba(255, 255, 255); */
+}
