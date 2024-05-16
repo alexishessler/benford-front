@@ -11,7 +11,7 @@ const HomeIntro = () => {
             width="100%"
             darkmode={`${darkMode}`}>
             <SubTitle darkmode={`${darkMode}`}>
-                <strong>Comparez vos data selon la Loi de Benford...</strong> 🧙‍♀️
+                <strong>Comparez vos datas selon la Loi de Benford...</strong> 🧙‍♀️
             </SubTitle>
             <PresentationTitle darkmode={`${darkMode}`}>
                 Et décelez une potentielle corruption de vos données ! 😏

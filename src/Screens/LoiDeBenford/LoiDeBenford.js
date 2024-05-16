@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { StyledDisplayBox as DisplayBox } from '../../StyledComponents/DisplayBox';
 import { PresentationTitle, Text, SubTitle } from '../../StyledComponents/Title';
 import { InfosPresentation,  } from '../../Components/HomeSections/HomeSections';
-import './InfoScreen.css';
+import './LoiDeBenford.css';
 
 const InfoScreen = () => {
 
@@ -27,7 +27,7 @@ const InfoScreen = () => {
                 darkmode={`${darkMode}`}>
                 <div style={{display: 'flex', justifyContent: "center", alignItems: 'center', flexDirection: "column"}}>
                     {/* <SubTitle darkmode={`${darkMode}`} style={{paddingTop:20}}>
-                    <strong>Comparez vos data selon la Loi de Benford...</strong> 🧙‍♀️
+                    <strong>Comparez vos datas selon la Loi de Benford...</strong> 🧙‍♀️
                     </SubTitle> */}
                     <PresentationTitle darkmode={`${darkMode}`}>
                         Comprendre le fonctionnement en 10 min
@@ -86,7 +86,7 @@ const InfoScreen = () => {
                 darkmode={`${darkMode}`}>
                 <div style={{display: 'none', justifyContent: "center", alignItems: 'center', flexDirection: "column", textAlign: "center"}}>
                     {/* <SubTitle darkmode={`${darkMode}`} style={{paddingTop:20}}>
-                    <strong>Comparez vos data selon la Loi de Benford...</strong> 🧙‍♀️
+                    <strong>Comparez vos datas selon la Loi de Benford...</strong> 🧙‍♀️
                     </SubTitle> */}
                     <PresentationTitle darkmode={`${darkMode}`}>
                        Voyez par vous-mêmes...

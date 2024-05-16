@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Title = styled.h1`
+  color: ${props => props.darkmode === 'true' ? '#FFF' : '#000'};
   text-shadow: ${props => props.textShadow === 'true' ? '1px 1px 2px rgba(73, 73, 73, 0.73)' : ''};
   margin: ${props => props.margin ? props.margin : '0px'};
   font-weight: bold;

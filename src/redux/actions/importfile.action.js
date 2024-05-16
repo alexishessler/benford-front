@@ -23,7 +23,7 @@ export const importFile = (file, rawFile) => async (dispatch, getState) => {
 
         const { data } = await axios.post(
             // `/api/upload-file`,
-            `http://193.134.250.229/api/upload-file`,
+            `${window.env.URL}/api/upload-file`,
             file,
             config
         )

@@ -3,9 +3,11 @@ import { Route, Switch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Menu from './Components/Menu/Menu';
+import Footer from './Components/Footer/Footer';
 import AnalyseScreen from './Screens/AnalyseScreen/AnalyseScreen';
 import HomeScreen from './Screens/HomeScreen/HomeScreen';
-import InfoScreen from './Screens/InfoScreen/InfoScreen';
+import LoiDeBenford from './Screens/LoiDeBenford/LoiDeBenford';
+import ModeEmploi from './Screens/ModeEmploi/ModeEmploi';
 import NotFoundScreen from './Screens/NotFoundScreen/NotFoundScreen';
 import './App.css';
 
@@ -13,7 +15,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchApi = async () => {
-      const { data } = await axios.get('http://193.134.250.229/api/test')
+      const { data } = await axios.get(`${window.env.URL}/api/test`)
       console.log("Welcome To Benford Law App", data)
     }
     fetchApi()
@@ -31,19 +33,17 @@ const App = () => {
         <Route exact path="/analyse">
             <AnalyseScreen/>
         </Route>
-        <Route exact path="/analyse/exemple/:exemplefile">
-            <AnalyseScreen/>
+        <Route exact path="/loi-de-benford">
+            <LoiDeBenford/>
         </Route>
-        <Route exact path="/explications">
-            <InfoScreen/>
+        <Route exact path="/mode-emploi">
+            <ModeEmploi/>
         </Route>
-        {/* <Route exact path="/explications/exemple/population-communes">
-            <AnalyseScreen/>
-        </Route> */}
         <Route>
             <NotFoundScreen/>
         </Route>
     </Switch>
+    <Footer/>
   </div>
   );
 }

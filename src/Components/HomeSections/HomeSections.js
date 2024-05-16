@@ -9,12 +9,12 @@ const HomePresentation = () => {
             <div className="HomePresentation">
                 <div className="HomePresentation_filter">
                 <SubTitle textShadow={`true`} darkmode={`true`}>
-                    <strong>Comparez vos data selon la Loi de Benford.</strong> 
+                    <strong>Comparez vos datas selon la Loi de Benford.</strong> 
                 </SubTitle>
                 <PresentationTitle textShadow={`true`} darkmode={`true`}>
                     Et décelez une potentielle corruption de vos données !
                 </PresentationTitle>
-                <Link className="Home_btn" to="/analyse" padding='30px' textShadow="true" style={{position: 'relative', marginTop: 20}}><AiFillCheckSquare style={{position: 'absolute', top: 22, left: 15}}/> <i>Benfordisez</i> vos data</Link>
+                <Link className="Home_btn" to="/analyse" padding='30px' textShadow="true" style={{position: 'relative', marginTop: 20}}><AiFillCheckSquare style={{position: 'absolute', top: 22, left: 15}}/> Benfordiser mes datas</Link>
                 </div>
             </div>
         </>
@@ -30,7 +30,7 @@ const HomeFunny = () => {
                     Et si votre jeu de molky vous jouait des tours...
                     <br/> <strong>Ou pas.</strong>
                 </PresentationTitle>
-                <Link backgroundColor="rgba(255, 255, 255)" className="Home_btn" to="/explications" padding='30px' textShadow="false" style={{position: 'relative', marginTop: 20, color:"#000", textAlign: 'left'}}><AiFillBulb style={{position: 'absolute', top: 35, left: 15}}/> Découvrez la loi de Benford <br/><span style={{fontWeight: 'lighter'}}>en 10 minutes avec ARTE TV</span></Link>
+                <Link backgroundColor="rgba(255, 255, 255)" className="Home_btn" to="/loi-de-benford" padding='30px' textShadow="false" style={{position: 'relative', marginTop: 20, color:"#000", textAlign: 'left'}}><AiFillBulb style={{position: 'absolute', top: 35, left: 15}}/> Découvrez la loi de Benford <br/><span style={{fontWeight: 'lighter'}}>en 10 minutes avec ARTE TV</span></Link>
                 </div>
             </div>
         </>
@@ -47,7 +47,7 @@ const AnalysePresentation = ({ exemplefile }) => {
                     {
                         exemplefile === undefined && (
                             <>
-                                Obtenez un signal fort sur la potentielle véracité de vos data.
+                                Obtenez un signal fort sur la potentielle véracité de vos datas.
                                 <br/> <strong>C'est parti !</strong>
                             </>
                         )
@@ -90,9 +90,25 @@ const InfosPresentation = () => {
     )
 }
 
+const ModeEmploiPresentation = () => {
+    return (
+        <>
+            <div className="ModeEmploiPresentation">
+                <div className="ModeEmploiPresentation_filter">
+                <PresentationTitle textShadow={`true`} darkmode={`true`}>
+                    Comment benfordiser mes datas ?
+                    <br/> <strong>Le mode d'emploi.</strong>
+                </PresentationTitle>
+                </div>
+            </div>
+        </>
+    )
+}
+
 export {
     HomePresentation, 
     HomeFunny,
     AnalysePresentation,
-    InfosPresentation
+    InfosPresentation,
+    ModeEmploiPresentation
 }
