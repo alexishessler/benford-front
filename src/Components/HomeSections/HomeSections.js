@@ -9,7 +9,7 @@ const HomePresentation = () => {
             <div className="HomePresentation">
                 <div className="HomePresentation_filter">
                 <SubTitle textShadow={`true`} darkmode={`true`}>
-                    <strong>Comparez vos datas selon la Loi de Benford.</strong> 
+                    <strong>Poussez plus loins vos investigations en comparant vos datas selon la Loi de Benford.</strong> 
                 </SubTitle>
                 <PresentationTitle textShadow={`true`} darkmode={`true`}>
                     Et décelez une potentielle corruption de vos données !
@@ -81,7 +81,7 @@ const InfosPresentation = () => {
             <div className="InfosPresentation">
                 <div className="InfosPresentation_filter">
                 <PresentationTitle textShadow={`true`} darkmode={`true`}>
-                    Une collection de chiffres aléatoires...
+                    Une série quelconque de chiffres ou de nombres est forcemment aléatoirement répartie...
                     <br/> <strong>Vraiment ?</strong>
                 </PresentationTitle>
                 </div>

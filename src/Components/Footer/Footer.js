@@ -33,11 +33,11 @@ const Menu = () => {
 
         <>
 
-            <Container fluid style={{textAlign: 'center', backgroundColor: darkMode ? '#000' : '#546de5'}}>
+            <Container fluid style={{marginTop: 30, textAlign: 'center', backgroundColor: darkMode ? '#000' : '#F48C06'}}>
                 <Row>
                     <Col xs={12} sm={12}>
-                        <div style={{textAlign: 'center', padding: 40, color: darkMode ? '#546de5' : '#FFF'}}>
-                            <a class="footer_link" href="#" download>Politique de confidentialité</a> | <a class="footer_link" href="#" download>Mentions légales</a>
+                        <div style={{textAlign: 'center', padding: 40, color: darkMode ? '#F48C06' : '#FFF'}}>
+                            <a class="footer_link" href="#" download>Politique de confidentialité</a> | <a class="footer_link" href="#" download>Mentions légales</a> | Code source : <a class="footer_link" href="https://github.com/alexishessler/benford-front" target='_blank'><FaExternalLinkAlt darkmode={`${darkMode}`}/> Frontend</a> <a class="footer_link" href="https://github.com/alexishessler/benford-back" target='_blank'><FaExternalLinkAlt darkmode={`${darkMode}`}/> Backend</a>
                         </div>
                     </Col>
                 </Row>

@@ -40,7 +40,7 @@ export const PresentationTitle = styled.h3`
   color: ${props => props.darkmode === 'true' ? 'rgba(255, 255, 255)' : 'rgb(0, 0, 0)'};
   margin: ${props => props.margin ? props.margin : '20px'};
   font-weight: lighter;
-  padding: 5px;
+  padding: ${props => props.padding ? props.padding : '5px'};
   @media (min-width: 480px) {
     font-size: 1rem;
   }

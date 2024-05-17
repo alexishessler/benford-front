@@ -18,9 +18,9 @@ export const StyledLink = styled(Link)`
   };
   color: ${ (props) => {
       if(props.actionBtn){
-        return props.darkmode === 'true' ? "rgba(255, 255, 255)" : '#546de5'
+        return props.darkmode === 'true' ? "rgba(255, 255, 255)" : '#F48C06'
       }
-      return props.darkmode === 'true' ? "#546de5" : 'rgba(255, 255, 255)'
+      return props.darkmode === 'true' ? "#F48C06" : 'rgba(255, 255, 255)'
     }
   };
   
@@ -34,10 +34,10 @@ export const StyledLink = styled(Link)`
 `;
 
 export const StyledBtnLink = styled(Link)`
-  color: ${props => props.darkmode === 'true' ? '#546de5' : 'rgba(255, 255, 255)'};
+  color: ${props => props.darkmode === 'true' ? '#F48C06' : 'rgba(255, 255, 255)'};
   font-weight: 700;
   background-color: ${ (props) => {
-      return props.backgroundColor ? props.backgroundColor : '#546de5'
+      return props.backgroundColor ? props.backgroundColor : '#F48C06'
     }
   };
   border: 0px;

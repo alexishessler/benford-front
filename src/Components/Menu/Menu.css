@@ -10,11 +10,11 @@
 
 .menu_dark {
     background-color: rgb(19, 18, 19);
-    color: #546de5;
+    color: #F48C06;
 }
 
 .menu_light {
-    background-color: #546de5;
+    background-color: #F48C06;
     color: rgba(255, 255, 255);
 }
 
@@ -26,7 +26,7 @@
     border-color: rgb(19, 18, 19);
 }
 .menu_toggle_dark.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-    background-color: #546de5;;
+    background-color: #F48C06;;
 }
 
 .menu_presentation {
