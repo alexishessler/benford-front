@@ -17,6 +17,113 @@ const ModeEmploi = () => {
 
     const darkMode = useSelector((state) => state.darkMode);
 
+
+    const stepsData = [
+        {
+            title: "Choisissez des données à analyser",
+            texts: [
+                {
+                    type: "txt",
+                    content: "Vous n'avez pas de données à analyser, ou vous souhaitez faire un simple essai pour commencer ?",
+                },
+                {
+                    type: "link",
+                    url: "https://www.data.gouv.fr/fr/",
+                    content: "[Exemple] En guise d'exemple, ou pour tester sur des jeux de données, cliquez ici pour explorer la base gouvernementale de données publiques : data.gouv.fr.",
+                },
+                
+ 
+            ],
+            img: "",
+        },
+        {
+            title: "Veiller à disposer d'un fichier au format .csv",
+            texts: [
+                {
+                    type: "txt",
+                    content: "Tout d'abord, il vous faut disposer d'un fichier au format .csv qui comprend vos datas. Si votre fichier dispose d'une autre extension (.json, .xls, .xlsx, etc.), il vous faut le convertir en .csv au préalable.",
+                },
+                {
+                    type: "link",
+                    url: "/table-indicateurs-open-data-dep-2023-06-30-17h59.csv",
+                    content: "[Exemple] Toujours pour l'exemple, cliquez ici pour télécharger le fichier de synthèse des chiffres de l'épidemie de Covid 19, provenant de data.gouv.fr : table-indicateurs-open-data-dep-2023-06-30-17h59.csv.",
+                },
+            ],
+            img: "",
+        },
+        {
+            title: "Vérifier la structure du fichier à analyser",
+            texts: [
+                {
+                    type: "txt",
+                    content: "Attention, tous les fichiers ne sont pas bons à analyser en l'état. Non seulement il doit contenir suffisamment de données exploitables qui respectent une réapartition aléatoire. Mais aussi, il vous faut vérifier sa structure." ,
+                },
+                {
+                    type: "txt",
+                    content: "Dans ce fichier .csv, la première cellule (la première ligne) doit contenir les intitulés de 1 ou plusieurs colonnes. Si plusieurs colonnes, les intitulés doivent être séparés par un même séparateur : en général il s'agit d'une virgule (,) ou d'un point virgule (;). Toutes les lignes suivantes contiennent les données, avec aussi le même séparateur le cas échéant. Au moins une colonne doit exister." ,
+                },
+                {
+                    type: "txt",
+                    content: "[Exemple] Voici un exemple de structure attendue (ici l'exemple reprend le fichier de l'étape n°2) : " ,
+                },
+            ],
+            img: "/structure-exemple.png",
+        },
+        {
+            title: "Uplader votre fichier à benfordiser",
+            texts: [
+                {
+                    type: "txt",
+                    content: "Pour finir, rendez-vous sur la page \"Benfordiser mes datas\". Uploadez votre fichier depuis votre ordinateur. Dans les champs qui apparaissent, indiquez le séparateur (par exemple , ou ;), et enfin l'intitulé de la colonne à analyser en premier.",
+                },
+                {
+                    type: "txt",
+                    content: "[Exemple] Pour le fichier d'exemple, vous pourriez indiquer \"rea\" sans les guillemets, pour analyser la colonne intitulée rea, qui recense le nombre d'admission de patients Covid 19 en réanimation, par date. Vous pourrez ensuite visualiser les résultats de conformité avec la loi de Benford, et explorer les autres colonnes le cas échéant.",
+                },
+            ],
+            img: "",
+        },
+    ]
+
+    const steps = stepsData.map((step, i) => {
+        return (
+            <Col xs={12} sm={6} md={4} lg={3} style={{paddingTop: 30}}>
+                <DisplayBox
+                    key={i+1}
+                    className={""}
+                    minHeight="200px"
+                    darkmode={`${darkMode}`}>
+                    <PresentationTitle margin="0px" padding="20px 20px 0px 20px" darkmode={`${darkMode}`}>
+                        Étape n°{i+1} : {step.title}
+                    </PresentationTitle>
+                    <hr/>
+    
+                    {
+                        step.texts.map(el => {
+                            if(el.type === "txt"){
+                                return (
+                                    <Text margin="0px 20px" darkmode={`${darkMode}`}>
+                                        <span>{el.content}</span>
+                                    </Text>
+                                )
+                            }
+                            if(el.type === "link"){
+                                return (
+                                    <Text margin="0px 20px" darkmode={`${darkMode}`}>
+                                        <a target="_blank" href={`${el.url}`}>{el.content}</a>
+                                    </Text>
+                                )
+                            }
+                        })
+                    }
+                    {
+                        step.img && (<img style={{width: '100%'}} src={`${step.img}`} alt={`${step.title}`}/>)
+                    }
+                </DisplayBox>
+            </Col>
+        )
+    })
+
     return (
         <>
 
@@ -35,73 +142,14 @@ const ModeEmploi = () => {
                                 <strong>Poussez plus loin vos investigations en comparant vos datas selon la loi de Benford...</strong> 🧙‍♀️
                                 </SubTitle> */}
                                 <PresentationTitle darkmode={`${darkMode}`}>
-                                    Comprendre la loi de Benford en 10 min avec une vidéo simple (réalisée par ARTE).
+                                    Mode d'emploi step-by-step pour analyser vos datas.
                                 </PresentationTitle>
                             </div>
                         </DisplayBox>
                     </Col>
-                    <Col md={12} lg={6} style={{paddingTop: 30}}>
-                        <iframe
-                            style={{borderRadius:15}}
-                            width="100%"
-                            height="600px"
-                            src={`https://www.youtube.com/embed/wS1Tsj_fl5o`}
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            title="Embedded youtube"
-                        />     
-                    </Col>
-                    <Col md={12} lg={6} style={{paddingTop: 30}}>
-                        <DisplayBox
-                            className={""}
-                            minHeight="600px"
-                            darkmode={`${darkMode}`}>
-                            <PresentationTitle margin="0px" padding="20px 0px 0px 20px" darkmode={`${darkMode}`}>
-                                Les points clefs
-                            </PresentationTitle>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 1) La répartition de Benford est totalement équitable et normale selon une échelle multiplicative et non additive.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 2) Pour que la loi s'applique, il faut une série qui s'étende sur plusieurs ordres de grandeurs.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 3) Il n'y a pas de magie, la loi est mathématique et utilisée par les services fiscaux.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 4) L'applicabilité ou la non conformité de la loi avec vos données n'est pas une preuve en soi, mais plutôt un signal ou un indice à corroborer avec d'autres éléments pour matérialiser des faits.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 5) Informez vous sur les contours et utlisation de la loi par vous même. Point de départ possible : <br/><a target="_blank" href="https://fr.wikipedia.org/wiki/Loi_de_Benford">loi de Benford sur Wikipedia</a>.</span>
-                            </Text>
-                        </DisplayBox>
-                    </Col>
-                    <Col md={12} lg={12} style={{paddingTop: 30}}>
-                        <DisplayBox
-                            className={""}
-                            minHeight="200px"
-                            darkmode={`${darkMode}`}>
-                            <PresentationTitle margin="0px" padding="20px 0px 0px 20px" darkmode={`${darkMode}`}>
-                                Exemples de domaines d'application
-                            </PresentationTitle>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 1) Domaine scientifique : études épidémiologiques localisées tel que le Covid dans certaines zones, résultats thérapeutiques, publications chiffrées, etc.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 2) Domaine militaire : propagande militaire "d'État voyou", nombre de blessés et morts sur un théâtre d'opération tel qu'en Ukraine, etc.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 3) Domaine politique : résultats d'élections ou de référendums d'annexion, etc.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 4) Domaine fiscal ou du blanchiment : trucage de caisse ou de recettes, falsification comptable, etc.</span>
-                            </Text>
-                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> X) Etc., domaines multiples, du moment que les conditions d'application de la loi sont vérifiées.</span>
-                            </Text>
-                        </DisplayBox>
-                    </Col>
+
+                    { steps }
+                    
                 </Row>
             </Container>
 
