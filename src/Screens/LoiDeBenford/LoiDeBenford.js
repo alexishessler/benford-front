@@ -98,6 +98,9 @@ const InfoScreen = () => {
                                 <span style={{padding: 5}}>> 4) Domaine fiscal ou du blanchiment : trucage de caisse ou de recettes, falsification comptable, etc.</span>
                             </Text>
                             <Text margin="10px 0px 10px 20px" darkmode={`${darkMode}`}>
+                                <span style={{padding: 5}}>> 5) Domaine économique et intelligence économique : publications de résultats d'études, données diverses concurentielle, etc.</span>
+                            </Text>
+                            <Text margin="10px 0px 10px 20px" darkmode={`${darkMode}`}>
                                 <span style={{padding: 5}}>> X) Etc., domaines multiples, du moment que les conditions d'application de la loi sont vérifiées.</span>
                             </Text>
                         </DisplayBox>
