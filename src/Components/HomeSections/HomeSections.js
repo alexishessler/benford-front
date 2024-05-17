@@ -9,7 +9,7 @@ const HomePresentation = () => {
             <div className="HomePresentation">
                 <div className="HomePresentation_filter">
                 <SubTitle textShadow={`true`} darkmode={`true`}>
-                    <strong>Poussez plus loins vos investigations en comparant vos datas selon la Loi de Benford.</strong> 
+                    <strong>Poussez plus loin vos investigations en comparant vos datas selon la loi de Benford.</strong> 
                 </SubTitle>
                 <PresentationTitle textShadow={`true`} darkmode={`true`}>
                     Et décelez une potentielle corruption de vos données !

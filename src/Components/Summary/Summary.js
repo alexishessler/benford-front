@@ -79,7 +79,7 @@ const Summary = () => {
                 {/* <YAxis /> */}
                 {/* <Tooltip/> */}
                 <Legend />
-                <Area type="monotone" dataKey="BenfordFrequency" name="Réparition Loi de Benford" fill="#8884d8" stroke="#8884d8" />
+                <Area type="monotone" dataKey="BenfordFrequency" name="Réparition loi de Benford" fill="#8884d8" stroke="#8884d8" />
                 <Bar dataKey="dataFrequency" name="Réparition de vos données" fill="#82ca9d" barSize={20}/>
                 </ComposedChart>
             </div>

@@ -22,3 +22,7 @@ body {
   background-color: #ebe5e5;
   /* color: rgba(255, 255, 255); */
 }
+
+a {
+  color: inherit;
+}

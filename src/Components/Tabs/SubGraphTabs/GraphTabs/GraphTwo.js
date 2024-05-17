@@ -31,7 +31,7 @@ const LineGraph = () => {
                 <YAxis />
                 <Tooltip/>
                 <Legend />
-                <Line type="monotone" dataKey="BenfordFrequency" name="Réparition Loi de Benford" stroke="#8884d8" />
+                <Line type="monotone" dataKey="BenfordFrequency" name="Réparition loi de Benford" stroke="#8884d8" />
                 <Line type="monotone" dataKey="dataFrequency" name="Réparition de vos données" stroke="#82ca9d" />
                 </LineChart>
             </div>
@@ -43,7 +43,7 @@ const LineGraph = () => {
                 <YAxis />
                 <Tooltip/>
                 <Legend />
-                <Area type="monotone" stackId="1" dataKey="BenfordFrequency" name="Réparition Loi de Benford" stroke="#8884d8" fill="#8884d8"/>
+                <Area type="monotone" stackId="1" dataKey="BenfordFrequency" name="Réparition loi de Benford" stroke="#8884d8" fill="#8884d8"/>
                 <Area type="monotone" stackId="1" dataKey="dataFrequency" name="Réparition de vos données" stroke="#82ca9d" fill="#82ca9d"/>
                 </AreaChart>
             </div>
@@ -55,7 +55,7 @@ const LineGraph = () => {
                 <YAxis />
                 <Tooltip/>
                 <Legend />
-                <Area type="monotone" stackId="1" dataKey="BenfordFrequencyPercent" name="Réparition Loi de Benford" stroke="#8884d8" fill="#8884d8" fillOpacity={0.3}/>
+                <Area type="monotone" stackId="1" dataKey="BenfordFrequencyPercent" name="Réparition loi de Benford" stroke="#8884d8" fill="#8884d8" fillOpacity={0.3}/>
                 <Area type="monotone" stackId="1" dataKey="dataFrequencyPercent" name="Réparition de vos données" stroke="#82ca9d" fill="#82ca9d"fillOpacity={0.3}/>
                 </AreaChart>
             </div>

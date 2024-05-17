@@ -32,7 +32,7 @@ const InfoScreen = () => {
                             darkmode={`${darkMode}`}>
                             <div style={{display: 'flex', justifyContent: "center", alignItems: 'center', flexDirection: "column"}}>
                                 {/* <SubTitle darkmode={`${darkMode}`} style={{paddingTop:20}}>
-                                <strong>Poussez plus loins vos investigations en comparant vos datas selon la Loi de Benford...</strong> 🧙‍♀️
+                                <strong>Poussez plus loin vos investigations en comparant vos datas selon la loi de Benford...</strong> 🧙‍♀️
                                 </SubTitle> */}
                                 <PresentationTitle darkmode={`${darkMode}`}>
                                     Comprendre la loi de Benford en 10 min avec une vidéo simple (réalisée par ARTE).
@@ -73,7 +73,32 @@ const InfoScreen = () => {
                                 <span style={{padding: 5}}>> 4) L'applicabilité ou la non conformité de la loi avec vos données n'est pas une preuve en soi, mais plutôt un signal ou un indice à corroborer avec d'autres éléments pour matérialiser des faits.</span>
                             </Text>
                             <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
-                                <span style={{padding: 5}}>> 5) Informez vous sur les contours et utlisation de la loi par vous même. Point de départ possible : <br/><a target="_blank" href="https://fr.wikipedia.org/wiki/Loi_de_Benford">Loi de Benford sur Wikipedia</a>.</span>
+                                <span style={{padding: 5}}>> 5) Informez vous sur les contours et utlisation de la loi par vous même. Point de départ possible : <br/><a target="_blank" href="https://fr.wikipedia.org/wiki/Loi_de_Benford">loi de Benford sur Wikipedia</a>.</span>
+                            </Text>
+                        </DisplayBox>
+                    </Col>
+                    <Col md={12} lg={12} style={{paddingTop: 30}}>
+                        <DisplayBox
+                            className={""}
+                            minHeight="200px"
+                            darkmode={`${darkMode}`}>
+                            <PresentationTitle margin="0px" padding="20px 0px 0px 20px" darkmode={`${darkMode}`}>
+                                Exemples de domaines d'application
+                            </PresentationTitle>
+                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
+                                <span style={{padding: 5}}>> 1) Domaine scientifique : études épidémiologiques localisées tel que le Covid dans certaines zones, résultats thérapeutiques, publications chiffrées, etc.</span>
+                            </Text>
+                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
+                                <span style={{padding: 5}}>> 2) Domaine militaire : propagande militaire "d'État voyou", nombre de blessés et morts sur un théâtre d'opération tel qu'en Ukraine, etc.</span>
+                            </Text>
+                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
+                                <span style={{padding: 5}}>> 3) Domaine politique : résultats d'élections ou de référendums d'annexion, etc.</span>
+                            </Text>
+                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
+                                <span style={{padding: 5}}>> 4) Domaine fiscal ou du blanchiment : trucage de caisse ou de recettes, falsification comptable, etc.</span>
+                            </Text>
+                            <Text margin="20px 0px 40px 20px" darkmode={`${darkMode}`}>
+                                <span style={{padding: 5}}>> X) Etc., domaines multiples, du moment que les conditions d'application de la loi sont vérifiées.</span>
                             </Text>
                         </DisplayBox>
                     </Col>

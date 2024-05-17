@@ -35,7 +35,7 @@ const BatonGraph = () => {
                 <YAxis />
                 <Tooltip/>
                 <Legend />
-                <Bar dataKey="BenfordFrequency" name="Réparition Loi de Benford" fill="#8884d8" />
+                <Bar dataKey="BenfordFrequency" name="Réparition loi de Benford" fill="#8884d8" />
                 <Bar dataKey="dataFrequency" name="Réparition de vos données" fill="#82ca9d" />
                 </BarChart>
             </div>
@@ -56,7 +56,7 @@ const BatonGraph = () => {
                 <YAxis />
                 <Tooltip/>
                 <Legend />
-                <Bar dataKey="BenfordFrequency" stackId="a" name="Réparition Loi de Benford" fill="#8884d8" />
+                <Bar dataKey="BenfordFrequency" stackId="a" name="Réparition loi de Benford" fill="#8884d8" />
                 <Bar dataKey="dataFrequency" stackId="a" name="Réparition de vos données" fill="#82ca9d" />
                 </BarChart>
             </div>
@@ -77,7 +77,7 @@ const BatonGraph = () => {
                 <YAxis />
                 <Tooltip/>
                 <Legend />
-                <Bar dataKey="BenfordFrequencyPercent" name="Réparition Loi de Benford" fill="#8884d8" background={{ fill: '#eee' }}/>
+                <Bar dataKey="BenfordFrequencyPercent" name="Réparition loi de Benford" fill="#8884d8" background={{ fill: '#eee' }}/>
                 <Bar dataKey="dataFrequencyPercent" name="Réparition de vos données" fill="#82ca9d" />
                 </BarChart>
             </div>

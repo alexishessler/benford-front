@@ -38,7 +38,7 @@ const CamembGraph = () => {
                 <YAxis />
                 <Tooltip/>
                 <Legend />
-                <Area type="monotone" dataKey="BenfordFrequency" name="Réparition Loi de Benford" fill="#8884d8" stroke="#8884d8" />
+                <Area type="monotone" dataKey="BenfordFrequency" name="Réparition loi de Benford" fill="#8884d8" stroke="#8884d8" />
                 <Bar dataKey="dataFrequency" name="Réparition de vos données" fill="#82ca9d" barSize={20}/>
                 </ComposedChart>
             </div>
@@ -55,7 +55,7 @@ const CamembGraph = () => {
                     cy="50%"
                     outerRadius={80}
                     fill="#8884d8"
-                    name="Réparition Loi de Benford"
+                    name="Réparition loi de Benford"
                     label
                 />
                 </PieChart>
@@ -71,7 +71,7 @@ const CamembGraph = () => {
                     cy="50%"
                     outerRadius={80}
                     fill="#82ca9d"
-                    name="Réparition Loi de Benford"
+                    name="Réparition loi de Benford"
                     label
                 />
                 </PieChart>
@@ -83,7 +83,7 @@ const CamembGraph = () => {
                 <PolarGrid />
                 <PolarAngleAxis dataKey="n" />
                 <PolarRadiusAxis angle={30} domain={[0, 150]} />
-                <Radar name="Réparition Loi de Benford" dataKey="BenfordFrequency" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                <Radar name="Réparition loi de Benford" dataKey="BenfordFrequency" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
                 <Radar name="Réparition de vos données" dataKey="dataFrequency" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
             
                 </RadarChart>

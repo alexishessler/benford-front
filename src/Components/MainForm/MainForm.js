@@ -86,6 +86,7 @@ const MainForm = ({allowedExtensions}) => {
         if(fakeResponse){
             setTimeout(() => {
                 const section = document.querySelector('#scrollToUploaderDivTop');
+                console.log("COUCOU SECTION", section)
                 section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
                 setTimeout(() => {
                     setSetlectedFile({
